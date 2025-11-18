@@ -1653,7 +1653,7 @@ namespace Iogn {
     }
 
     Ioss::NameList result;
-    ShellLocation  loc      = sidesets[set_id - 1];
+    ShellLocation  loc       = sidesets[set_id - 1];
     auto           shell_ids = shell_ids_at_location(loc);
     if (!shell_ids.empty()) {
       result.push_back("block_" + std::to_string(shell_ids.back()));
@@ -1674,7 +1674,7 @@ namespace Iogn {
         result.push_back(i + 2);
       }
     }
-    if(loc == MX || loc == MY || loc == MZ) {
+    if (loc == MX || loc == MY || loc == MZ) {
       std::reverse(result.begin(), result.end());
     }
     return result;

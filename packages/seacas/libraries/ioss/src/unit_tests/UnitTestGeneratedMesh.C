@@ -49,14 +49,14 @@ TEST(GeneratedMesh, FourShellsOppositeSides)
 TEST(GeneratedMesh, ShellIdsatLocationPXEmpty)
 {
   Iogn::GeneratedMesh gm("10x12x14");
-  auto shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::PX);
+  auto                shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::PX);
   EXPECT_TRUE(shell_ids.empty());
 }
 
 TEST(GeneratedMesh, ShellIdsatLocationMX)
 {
   Iogn::GeneratedMesh gm("10x12x14|shell:xxx");
-  auto shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::MX);
+  auto                shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::MX);
   EXPECT_EQ(shell_ids.size(), 3);
   EXPECT_EQ(shell_ids.back(), 2);
   EXPECT_EQ(shell_ids.front(), 4);
@@ -66,7 +66,7 @@ TEST(GeneratedMesh, ShellIdsatLocationMX)
 TEST(GeneratedMesh, ShellIdsatLocationPX)
 {
   Iogn::GeneratedMesh gm("10x12x14|shell:xxxXX");
-  auto shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::PX);
+  auto                shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::PX);
   EXPECT_EQ(shell_ids.size(), 2);
   EXPECT_EQ(shell_ids.back(), 6);
   EXPECT_EQ(shell_ids.front(), 5);
@@ -75,8 +75,7 @@ TEST(GeneratedMesh, ShellIdsatLocationPX)
 TEST(GeneratedMesh, ShellIdsatLocationMZ)
 {
   Iogn::GeneratedMesh gm("10x12x14|shell:xxxXXyyyYYzZZ");
-  auto shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::MZ);
+  auto                shell_ids = gm.shell_ids_at_location(Iogn::GeneratedMesh::ShellLocation::MZ);
   EXPECT_EQ(shell_ids.size(), 1);
   EXPECT_EQ(shell_ids.front(), 12);
 }
-
