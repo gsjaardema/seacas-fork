@@ -1668,7 +1668,6 @@ namespace Iogn {
   {
     std::vector<size_t> result;
 
-    int64_t shell_block = 0;
     for (size_t i = 0; i < shellBlocks.size(); i++) {
       if (shellBlocks[i] == loc) {
         result.push_back(i + 2);
