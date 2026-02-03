@@ -30,7 +30,7 @@ jobs:
         with:
           context: docker/exodus
           push: true
-          tags: mrbuche/exodus:latest
+          tags: gdsjaar/exodus:latest
       - name: Delay before pull
         run: sleep 234s
   test-latest:
