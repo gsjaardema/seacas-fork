@@ -609,7 +609,7 @@ if [ "$CGNS" == "YES" ] && [ "$HDF5" == "YES" ]
 then
     if [ "$FORCE" == "YES" ] || [ "$FORCE_CGNS" == "YES" ] || ! [ -e $INSTALL_PATH/lib/libcgns.${LD_EXT} ]
     then
-        cgns_version="v4.5.0"
+        cgns_version="v4.5.1"
         echo "${txtgrn}+++ CGNS ${cgns_version} ${txtrst}"
         cd $ACCESS || exit
         cd TPL/cgns || exit
