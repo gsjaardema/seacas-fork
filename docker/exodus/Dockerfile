@@ -39,6 +39,4 @@ RUN ../cmake-exodus && \
     make && \
     make install
 ENV PATH="${PATH}:/seacas/bin/"
-ENV PYTHONPATH="${PYTHONPATH:-""}:/seacas/lib/"
-ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH:-""}:/seacas/lib/"
 CMD ["/bin/bash"]
