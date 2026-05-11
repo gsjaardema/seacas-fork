@@ -420,7 +420,7 @@ template <typename T> const std::string get_entity_type_test()
 {
   // Use "node" as default entity type to enable factory to create object.
   std::unique_ptr<T> entity(Ioad::NewEntity<T>(nullptr, "", "node", 0));
-  auto retval = entity->type_string();
+  auto               retval = entity->type_string();
   return retval;
 }
 
