@@ -20,7 +20,7 @@ RUN apt-get update && \
         libzip-dev \
         m4 \
         openmpi-bin \
-	python3.10 \
+	python3.12 \
         python3-dev \
         python3-mpi4py \
         python3-numpy \
